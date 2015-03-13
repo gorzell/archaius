@@ -48,17 +48,17 @@ import com.netflix.archaius.property.PropertyFactoryDynamicConfigObserver;
  * 
  * RUNTIME      - Properties set via code have absolute priority
  * DYNAMIC      - Properties loaded from a remote override service.  DynamicConfig derived
- *                objects are added to this layer by calling {@link DefaultAppConfig#addConfigXXX()}
+ *                objects are added to this layer by calling {@link DefaultAppConfig#addConfigFirst(Config)} or {@link DefaultAppConfig#addConfigLast(Config)}
  * APPLICATION  - Properties loaded at startup from 'config.properties' and variants
  * LIBRARY      - Properties loaded by libraries or subsystems of the application.
- *                Calling {@link DefaultAppConfig#addConfigXXX()} loads Configs into this layer.
+ *                Calling {@link DefaultAppConfig#addConfigFirst(Config)} or {@link DefaultAppConfig#addConfigLast(Config)} loads Configs into this layer.
  * SYSTEM       - System.getProperties()
  * ENVIRONMENT  - System.getenv()
  * 
  * <h1>Dynamic configuration</h1>
  * 
- * In addition to static configurations AppConfig exposes an API to fetch {@link PropertyDsl} 
- * objects through which client code can receive update notification for properties.  Note that 
+ * In addition to static configurations AppConfig exposes an API to fetch {@link PropertyContainer}
+ * objects through which client code can receive update notifications for properties.  Note that
  * updates to ObservableProperty are pushed once an underlying DynamicConfig configuration 
  * changes.  Multiple DynamicConfig's may be added to the ConfigManager and all will be automatically
  * subscribed to for configuration changes.

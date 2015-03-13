@@ -66,7 +66,6 @@ public class CascadingCompositeConfig extends AbstractConfig implements Composit
     /**
      * Add a Config to the end of the list so that it has least priority
      * @param child
-     * @return
      */
     @Override
     public synchronized void addConfigLast(Config child) throws ConfigException {
@@ -85,7 +84,6 @@ public class CascadingCompositeConfig extends AbstractConfig implements Composit
     /**
      * Add a Config to the end of the list so that it has highest priority
      * @param child
-     * @return
      */
     @Override
     public synchronized void addConfigFirst(Config child) throws ConfigException {

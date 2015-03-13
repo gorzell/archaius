@@ -73,28 +73,27 @@ public interface ConfigLoader {
         /**
          * Once loaded add all the properties to System.setProperty()
          * @param toSystem
-         * @return
          */
         Loader withLoadToSystem(boolean toSystem);
         
         /**
          * Load configuration by cascade resource name.
          * @param resourceName
-         * @return
+         * @return Config object representing the given resource.
          */
         Config load(String resourceName) throws ConfigException;
         
         /**
          * Load configuration from a specific URL
          * @param url
-         * @return
+         * @return Config object representing the given url.
          */
         Config load(URL url) throws ConfigException;
         
         /**
          * Load configuration from a specific file
-         * @param url
-         * @return
+         * @param file
+         * @return Config object representing the given file.
          * @throws ConfigException 
          */
         Config load(File file) throws ConfigException;

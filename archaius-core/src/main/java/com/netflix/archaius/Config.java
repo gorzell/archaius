@@ -82,7 +82,7 @@ public interface Config {
     /**
      * Return the raw String value for a property
      * @param key
-     * @return
+     * @return Raw string.
      */
     Object getRawProperty(String key);
     
@@ -94,15 +94,11 @@ public interface Config {
     /**
      * Return a subset of the configuration prefixed by a key.
      * 
-     * @param key
-     * @return
+     * @param prefix
+     * @return Config object with a subset of the config
      */
     Config subset(String prefix);
     
-    /**
-     * 
-     * @param interpolator
-     */
     Config getParent();
     
     void setParent(Config config);

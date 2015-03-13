@@ -34,8 +34,7 @@ public interface StrInterpolator {
      * for infinite recursion. 
      * 
      * @param key
-     * @param lookup
-     * @return
+     * @return Interpolated value.
      */
     Object resolve(String key);
 }

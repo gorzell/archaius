@@ -46,11 +46,11 @@ public class PropertyFactoryDynamicConfigObserver implements DynamicConfigObserv
     }
 
     /**
-     * Get the ObservableProperty for a specific property name.  The ObservableProperty
+     * Get the PropertyContainer for a specific property name.  The PropertyContainer
      * is cached internally.
      * 
      * @param key
-     * @return
+     * @return PropertyContainer for the given key.
      */
     public PropertyContainer create(String key) {
         PropertyContainer container = registry.get(key);

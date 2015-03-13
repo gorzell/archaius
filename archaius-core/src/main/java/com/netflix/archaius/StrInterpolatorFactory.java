@@ -19,7 +19,7 @@ package com.netflix.archaius;
 /**
  * SPI for specifying the {@link StrInterpolator} type used by ConfigManager.
  * This factory exists since the root config doesn't exist yet when the 
- * interpolator type is added to the {@link DefaultAppConfig#Builder}
+ * interpolator type is added to the {@link com.netflix.archaius.DefaultAppConfig.Builder}
  * 
  * @author elandau
  *

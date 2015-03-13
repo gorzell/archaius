@@ -53,7 +53,7 @@ public interface Property<T> {
     /**
      * Get the last time the property was updated
      * @param units
-     * @return
+     * @return Last update time in the given format.
      */
     long getLastUpdateTime(TimeUnit units);
     

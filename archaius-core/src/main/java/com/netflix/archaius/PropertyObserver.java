@@ -18,7 +18,7 @@ package com.netflix.archaius;
 /**
  * Handler for property change notifications.  
  * 
- * @see {@link DefaultAppConfig} for usage example
+ * @see com.netflix.archaius.DefaultAppConfig for usage example.
  * 
  * @author elandau
  *
@@ -29,15 +29,12 @@ public interface PropertyObserver<T> {
      * Notification that the property value changed.  next=null indicates that the property
      * has been deleted.
      * 
-     * @param propName
-     * @param prevValue
-     * @param newValue
+     * @param value
      */
     public void onChange(T value);
     
     /**
      * Notification that a property update failed
-     * @param propName
      * @param error
      */
     public void onError(Throwable error);

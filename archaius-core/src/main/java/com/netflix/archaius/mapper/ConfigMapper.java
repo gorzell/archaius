@@ -43,7 +43,6 @@ public interface ConfigMapper {
      * 
      * @param injectee
      * @param config
-     * @param ioc
      * @throws MappingException
      */
     <T> void mapConfig(T injectee, Config config) throws MappingException;
@@ -53,8 +52,7 @@ public interface ConfigMapper {
      * to a Property.
      * 
      * @param type
-     * @param config
-     * @return
+     * @param factory
      */
     <T> T newProxy(Class<T> type, PropertyFactory factory);
 }

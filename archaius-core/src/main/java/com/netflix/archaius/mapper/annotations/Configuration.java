@@ -23,7 +23,7 @@ import java.lang.annotation.Target;
 
 /**
  * Marks a field as a configuration item. Governator will auto-assign the value based
- * on the {@link #value()} of the annotation via the set {@link ConfigurationProvider}.
+ * on the value of the annotation via the set {@link ConfigurationP}.
  */
 @Documented
 @Retention(java.lang.annotation.RetentionPolicy.RUNTIME)

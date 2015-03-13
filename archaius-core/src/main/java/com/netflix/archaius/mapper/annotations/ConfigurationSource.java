@@ -29,9 +29,10 @@ import com.netflix.archaius.StrInterpolator;
  * loading cascaded (or different name variations) of the source.
  * 
  * {@code
- * @ConfigurationSource(value="foo")
- * class Foo {
+ *  @ConfigurationSource(value="foo")
+ *  class Foo {
  * 
+ *  }
  * }
  * @author elandau
  *
@@ -42,8 +43,6 @@ public @interface ConfigurationSource {
     /**
      * List of named sources to load.  This could be a simple name, like 'foo' that is resolved by the 
      * property loaders or including a type, 'properties:foo.properties'.
-     * 
-     * @return
      */
     String[] value();
 
