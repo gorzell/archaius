@@ -29,7 +29,7 @@ public interface PropertyObserver<T> {
      * Notification that the property value changed.  next=null indicates that the property
      * has been deleted.
      * 
-     * @param value
+     * @param value The new value for the property.
      */
     public void onChange(T value);
     

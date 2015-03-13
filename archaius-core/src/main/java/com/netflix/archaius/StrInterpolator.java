@@ -36,5 +36,5 @@ public interface StrInterpolator {
      * @param key
      * @return Interpolated value.
      */
-    Object resolve(String key);
+    String resolve(String key);
 }
